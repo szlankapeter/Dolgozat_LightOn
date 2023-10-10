@@ -1,6 +1,6 @@
 .elem{
     border: 1px solid black;
-    border-radius: 100px;
+    border-radius: 20px;
     cursor: grab;
     margin: 1px;
 }
@@ -10,8 +10,14 @@
 }
 
 .jatekter{
-    width: 160px;
+    margin: auto;
+    width: 303px;
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
+}
+
+
+body{
+    text-align: center;
 }

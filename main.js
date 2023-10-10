@@ -1,6 +1,10 @@
-import Controller from "./Controller/Controller.js"
+import Controller from "./Controller/Controller.js";
 
+$(function () {
+  new Controller();
 
-$(function(){
-    new Controller();
-})
+  $(window).on("reset", () => {
+    location.reload();
+    console.log("asdasd");
+  });
+});

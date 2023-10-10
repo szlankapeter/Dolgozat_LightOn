@@ -1,5 +1,3 @@
-import Field_view from "./Field_view.js";
-
 class Lampa_view {
     constructor(szuloElem, index, szin) {
 
