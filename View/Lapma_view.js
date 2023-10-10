@@ -1,12 +1,17 @@
+import Field_view from "./Field_view.js";
+
 class Lampa_view {
     constructor(szuloElem, index, szin) {
+
         this.szuloElem = szuloElem;
         this.index = index;
+        this.szin = szin;
+        this.elem = null;
         this.#kiir();
         this.elem = szuloElem.children("div:last-child");;
         this.gomb= $("button");
         this.elem.on("click", () => {
-                this.#esemeny("valt");
+            this.#esemeny("valt");
         });
 
         if (szin=="sarga") {
@@ -14,12 +19,6 @@ class Lampa_view {
         } else {
             this.elem.css("background-color", "green");
         }
-        /*this.gomb.on("click", () => {
-            if (this.#allapot) {
-                this.#esemeny("start");
-                this.#allapot = false;
-            }
-        });*/
     }
 
     getIndex() {
@@ -38,18 +37,6 @@ class Lampa_view {
             this.elem.css("background-color", "green");
         }
     }
-
-    /*alapAllapot(){
-        for (let index = 0; index < 9; index++) {
-            if(Math.floor(Math.random() *11) > 5)
-            {
-                this.elem.css("background-color", "orange");
-            }else{
-                this.elem.css("background-color", "green");
-            }
-            
-        }
-    }*/
 
     #esemeny(nev) {
         const esemeny = new CustomEvent(nev, { detail: this });

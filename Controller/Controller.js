@@ -11,11 +11,11 @@ class Controller{
         $(window).on("valt", (event)=>{
             MODEL.setAllapot(event.detail.getIndex());
             event.detail.szinBeallit(MODEL.getAllapot()[event.detail.getIndex()]);
+            new Field_view($(".jatekter"), MODEL.getAllapot());
         })
-        /*$(window).on("start", (event)=>{
-            event.detail.alapAllapot();
-        })*/
     }
+
+    
 
 
 
